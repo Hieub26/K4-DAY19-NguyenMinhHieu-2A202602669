@@ -128,7 +128,7 @@ Vụ vận chuyển ma túy từ Đức của Cái Quang Huy và Nguyễn Tiến
 >
 > **Nên dùng KG** khi câu hỏi phải ghép nhiều nguồn hoặc gom nhiều tài liệu: ở Q3–Q6 Flat chỉ đạt recall 0.00–0.40 và judge 1, còn Graph đạt 1.00 / 2 ở cả bốn câu; tính trung bình 6 câu là 0.51 / 1.33 so với 1.00 / 2.00. Điều kiện để KG đáng tiền trong bài này: (1) có một thực thể chung ổn định giữa các nguồn (tội danh) và một phía có cấu trúc đủ đều để trích bằng regex (luật), nên chi phí LLM chỉ rơi vào 20 bài báo; (2) câu hỏi thuộc loại xuyên nguồn hoặc tổng hợp chiếm phần đáng kể; (3) số câu hỏi đủ nhiều để chi phí dựng một lần được chia nhỏ.
 >
-> Hai lưu ý từ số liệu: thiết kế ontology và `context()` quyết định cả độ chính xác lẫn chi phí (ontology gợi ý: recall 0.89, 5621 token vào mỗi câu; ontology tự thiết kế: recall 1.00, 2236 token), và điểm tuyệt đối ở đây chỉ dựa trên 6 câu hỏi với thước đo không phạt câu trả lời thừa (lỗi E4), nên chưa đủ để khẳng định graph không còn lỗi (E1, E3).
+> Hai lưu ý từ số liệu: thiết kế ontology và `context()` quyết định cả độ chính xác lẫn chi phí (ontology gợi ý: recall 0.89, 5621 token vào mỗi câu; ontology tự thiết kế: recall 1.00, 2236 token), và điểm tuyệt đối ở đây chỉ dựa trên 6 câu hỏi với thước đo không phạt câu trả lời thừa (lỗi E4), nên chưa đủ để khẳng định graph không còn lỗi (E3).
 
 ## 5. Tự kiểm (5 điểm)
 
