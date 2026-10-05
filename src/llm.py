@@ -89,7 +89,8 @@ def _openai_client(provider: str):
     from openai import OpenAI
 
     cfg = PROVIDERS[provider]
-    return OpenAI(api_key=os.environ[cfg["key"]], base_url=cfg["base_url"])
+    # Free-tier keys hit per-minute limits (429) mid-benchmark; the SDK backs off and retries.
+    return OpenAI(api_key=os.environ[cfg["key"]], base_url=cfg["base_url"], max_retries=12)
 
 class MeteredLLM:
     """`chat` and `embed` are drop-in `llm_fn` / `embedding_fn`; `usage` accumulates across calls."""
